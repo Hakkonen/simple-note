@@ -9,6 +9,13 @@ function Note() {
         console.log(header)
     }, [header])
 
+    function PasteAsPlainText (event) {
+        event.preventDefault()
+
+        const text = event.clipboardData.getData("text/plain")
+        document.execCommand("insertHTML", false, text)
+    }
+
     return (
         // <span>
         //     <input 
@@ -27,11 +34,13 @@ function Note() {
                 html={header}
                 className="content-editable note-header"
                 onChange={e => setHeader(e.target.value)}  
+
             />
             <ContentEditable  
                 html={textBody}
                 className="content-editable note-text"
                 onChange={e => setTextBody(e.target.value)}  
+                onPaste={PasteAsPlainText}
             />
         </div>
     )

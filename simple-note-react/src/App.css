@@ -4,6 +4,8 @@ body {
   margin: 0;
 
   color: black;
+
+  
 }
 
 .app-container {
@@ -47,6 +49,8 @@ body {
 
   display: flex;
   flex-wrap: wrap;
+  flex-shrink: 0;
+  flex-direction:row;
 
   margin: .5rem 0 0 0;
 
@@ -79,6 +83,7 @@ body {
 
   display: flex;
   flex-grow: 1;
+  flex-wrap: wrap;
 
   margin: .5rem 0 0 0;
   padding: 1rem;
@@ -87,6 +92,7 @@ body {
   border-top: 1px solid black;
   border-right: 1px solid black;
   border-bottom: 1px solid black;
+  
 }
 
 .note {
@@ -98,28 +104,38 @@ body {
 }
 
 .note-header {
-  width: auto;
-  height: auto;
+  /* min-width: 1rem;
+  min-height: 1rem; */
 
-  display: flex;
-  flex-grow: 1;
+  width: 80vw;
 
   outline: none;
-  /* border: none; */
 
   font-size: 2rem;
   font-weight: bold;
 }
 
 .note-text {
-  min-width: 1rem;
-  min-height: 1rem;
+  /* min-width: 1rem;
+  min-height: 1rem; */
+
+  width: 80vw;
 
   margin-top: .5rem;
 
-  display: flex;
-  flex-grow: 1;
-
   outline: none;
-  /* border: none; */
+}
+
+.content-editable {
+  /* max-width: 80vw;
+  overflow-wrap: break-word; */
+}
+
+.content-editable:hover {
+  background: #f7f7f7;
+}
+
+.content-editable:focus {
+  background: #fcf8e1;
+  outline: 0;
 }
