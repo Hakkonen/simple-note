@@ -5,10 +5,6 @@ function NotePage() {
     const [ count, setCount ] = useState(0)
     const [ colour, setColour ] = useState("")
 
-    // useEffect(() => {
-        
-    // }, [])
-
     return (
         <div className="note-page">
             <Note />

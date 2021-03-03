@@ -5,10 +5,12 @@ function Note() {
     const [ header, setHeader ] = useState("Header")
     const [ textBody, setTextBody ] = useState("Text body")
 
+    // Redundant
     useEffect(() => {
         console.log(header)
     }, [header])
 
+    // Removes styling from ctrl+c pasting
     function PasteAsPlainText (event) {
         event.preventDefault()
 
@@ -17,24 +19,12 @@ function Note() {
     }
 
     return (
-        // <span>
-        //     <input 
-        //         className="note-header"
-        //         value={header}
-        //         onChange={e => setHeader(e.target.value)}
-        //     />
-        //     <input 
-        //             className="note-text"
-        //             value={textBody}
-        //             onChange={e => setTextBody(e.target.value)}
-        //         />
-        // </span>
         <div>
             <ContentEditable  
                 html={header}
                 className="content-editable note-header"
                 onChange={e => setHeader(e.target.value)}  
-
+                onPaste={PasteAsPlainText}
             />
             <ContentEditable  
                 html={textBody}

@@ -17,9 +17,12 @@ body {
   width: 100%;
   height: 2.5em;
 
+  margin-bottom: 1rem;
+
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
+  flex-grow: 1;
 
   border-radius: 5px;
   border: 1px solid black;
@@ -40,19 +43,17 @@ body {
 /* Note container */
 .note-container {
   display: flex;
+  max-height: 90vh;
 }
 
 /* Note index */
 .note-index {
-  width: 15%;
-  min-height: 5em;
-
   display: flex;
-  flex-wrap: wrap;
-  flex-shrink: 0;
-  flex-direction:row;
+  flex-wrap: nowrap;
+  flex: 0 1 auto;
+  flex-direction: column;
 
-  margin: .5rem 0 0 0;
+  overflow-y: scroll;
 
   border-radius: 5px 0 0 5px;
   border: 1px solid black;
@@ -60,45 +61,58 @@ body {
 
 /* Index item */
 .index-item {
-  width: 100%;
+  width: auto;
   height: auto;
 
-  padding: .25rem 0 .25rem .5rem;
+  padding: .5rem;
 
-  /* border-bottom: 1px solid black; */
+  border-bottom: 1px solid black;
+}
+
+.index-item:hover {
+  background: #fcf8e1;
 }
 
 .index-item > h4 {
-  margin: .25rem;
+  /* width: 100%; */
+  margin: 0;
+  user-select: none;
 }
 
 .index-item > p {
-  margin: .25rem;
+  /* width: 100%; */
+  margin: 0;
+  user-select: none;
+}
+
+@media (orientation: portrait) {
+  .note-index {
+    
+  }
+
+  .index-item {
+    
+  }
 }
 
 /* Note page */
 .note-page {
   width: auto;
-  min-height: 100%;
+  height: auto;
 
   display: flex;
-  flex-grow: 1;
+  flex: 1 0 70%;
   flex-wrap: wrap;
-
-  margin: .5rem 0 0 0;
-  padding: 1rem;
 
   border-radius: 0 5px 5px 0;
   border-top: 1px solid black;
   border-right: 1px solid black;
   border-bottom: 1px solid black;
   
+  overflow-y: scroll;
 }
 
 .note {
-  width: 100%;
-  height: 100%;
-
   display: flex;
   flex-grow: 1;
 }
@@ -107,9 +121,11 @@ body {
   /* min-width: 1rem;
   min-height: 1rem; */
 
-  width: 80vw;
+  width: 100%;
 
   outline: none;
+
+  margin: .5rem;
 
   font-size: 2rem;
   font-weight: bold;
@@ -119,9 +135,10 @@ body {
   /* min-width: 1rem;
   min-height: 1rem; */
 
-  width: 80vw;
+  width: 100%;
+  max-height: 80vh;
 
-  margin-top: .5rem;
+  margin: .5rem;
 
   outline: none;
 }
