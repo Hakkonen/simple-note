@@ -1,15 +1,7 @@
 import React, { useEffect, useState } from "react"
 import ContentEditable from "react-contenteditable"
 
-function Note() {
-    const [ header, setHeader ] = useState("Header")
-    const [ textBody, setTextBody ] = useState("Text body")
-
-    // Redundant
-    useEffect(() => {
-        console.log(header)
-    }, [header])
-
+function Note(props) {
     // Removes styling from ctrl+c pasting
     function PasteAsPlainText (event) {
         event.preventDefault()
@@ -19,17 +11,17 @@ function Note() {
     }
 
     return (
-        <div>
+        <div className="note-page">
             <ContentEditable  
-                html={header}
+                html={props.header}
                 className="content-editable note-header"
-                onChange={e => setHeader(e.target.value)}  
+                // onChange={e => setHeader(e.target.value)}  
                 onPaste={PasteAsPlainText}
             />
             <ContentEditable  
-                html={textBody}
+                html={props.text}
                 className="content-editable note-text"
-                onChange={e => setTextBody(e.target.value)}  
+                // onChange={e => setTextBody(e.target.value)}  
                 onPaste={PasteAsPlainText}
             />
         </div>
