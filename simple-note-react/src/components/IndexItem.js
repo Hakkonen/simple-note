@@ -9,7 +9,7 @@ function IndexItem(props) {
         >
             <h4 id={props.index}>{props.header}</h4>
             <p id={props.index}>{props.text}</p>
-            <p style={{fontSize: ".8rem", margin: ".1rem 0 0 .1rem"}} id={props.index}>{props.index}</p>
+            <p style={{fontSize: ".8rem", margin: ".1rem 0 0 .1rem"}} id={props.index}>{props.date}</p>
         </div>
     )
 }
