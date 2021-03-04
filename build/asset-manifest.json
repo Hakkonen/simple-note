@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/simple-note-react/static/css/main.cf310160.chunk.css",
+    "main.js": "/simple-note-react/static/js/main.d5d78fff.chunk.js",
+    "main.js.map": "/simple-note-react/static/js/main.d5d78fff.chunk.js.map",
+    "runtime-main.js": "/simple-note-react/static/js/runtime-main.1795c458.js",
+    "runtime-main.js.map": "/simple-note-react/static/js/runtime-main.1795c458.js.map",
+    "static/js/2.13e1ef4d.chunk.js": "/simple-note-react/static/js/2.13e1ef4d.chunk.js",
+    "static/js/2.13e1ef4d.chunk.js.map": "/simple-note-react/static/js/2.13e1ef4d.chunk.js.map",
+    "static/js/3.353ef5ab.chunk.js": "/simple-note-react/static/js/3.353ef5ab.chunk.js",
+    "static/js/3.353ef5ab.chunk.js.map": "/simple-note-react/static/js/3.353ef5ab.chunk.js.map",
+    "index.html": "/simple-note-react/index.html",
+    "static/css/main.cf310160.chunk.css.map": "/simple-note-react/static/css/main.cf310160.chunk.css.map",
+    "static/js/2.13e1ef4d.chunk.js.LICENSE.txt": "/simple-note-react/static/js/2.13e1ef4d.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1795c458.js",
+    "static/js/2.13e1ef4d.chunk.js",
+    "static/css/main.cf310160.chunk.css",
+    "static/js/main.d5d78fff.chunk.js"
+  ]
+}
