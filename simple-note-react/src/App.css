@@ -40,6 +40,13 @@ body {
   display: flex;
   flex: 1 0 auto;
   justify-content: flex-end;
+  
+}
+
+@media(orientation: landscape) {
+  .new-note {
+    padding-bottom: .2rem;
+  }
 }
 
 .new-note > span {
